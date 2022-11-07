@@ -174,15 +174,15 @@
         let sales = takhir - tawal - terra;
         let loss = sakhir - (sawal - sales);
 
-        let text = `Laporan%20Penjualan%0${nops}%0Tgl%20${tanggal}%0${
+        let text = `Laporan%20Penjualan%0A${nops}%0ATgl%20${tanggal}%0A${
           jamkerja[shift]
-        }%0-----------------%0T.Awal%3A${tawal}%0T.Akhir%3A${takhir}%0Sales(L)%3A${sales}%0Sales(Rp)%3A${formatRupiah(
+        }%0A-----------------%0AT.Awal%3A${tawal}%0AT.Akhir%3A${takhir}%0ASales(L)%3A${sales}%0ASales(Rp)%3A${formatRupiah(
           sales * 13900
-        )}%0-----------------%0S.Awal%3A${Number(sawal).toFixed(
+        )}%0A-----------------%0AS.Awal%3A${Number(sawal).toFixed(
           2
-        )}%0S.Akhir%3A${Number(sakhir).toFixed(2)}%0Losses%3A${Number(
+        )}%0AS.Akhir%3A${Number(sakhir).toFixed(2)}%0ALosses%3A${Number(
           loss
-        ).toFixed(2)}%0`;
+        ).toFixed(2)}%0A`;
 
         fetch(scriptURL, {
           method: "POST",
