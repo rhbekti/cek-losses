@@ -189,13 +189,13 @@
           body: new FormData(form),
         })
           .then((response) => {
-            form.reset();
             Swal.fire({
               icon: "success",
               title: "Laporan Sukses",
               text: "Terima Kasih Atas Laporannya",
-              footer: `<a href="whatsapp://send?text="${text}">Kirim ke WA</a>`,
+              footer: `<a href="whatsapp://send?text=${text}">Kirim ke WA</a>`,
             });
+            form.reset();
           })
           .catch((error) =>
             Swal.fire({
