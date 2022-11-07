@@ -1,145 +1,235 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lapor PS - Penjualan</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="/index.html">LAPOR PS</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/index.html">Beranda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/penjualan.html">Penjualan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/penerimaan.html">Penerimaan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/kontak.html">Info Kantor</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">LAPOR PS</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/index.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/penjualan.html">Penjualan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/penerimaan.html">Penerimaan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/kontak.html">Info Kantor</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 py-4">
-                <h2>Form Laporan Penjualan Pertashop</h2>
-                <br>
-                <form name="submit-to-google-sheet">
-                    <div class="form-group mb-3">
-                        <label for="tgl" class="form-label">Tanggal</label>
-                        <input type="date" name="tanggal" id="tanggal" class="form-control">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="nops" class="form-label">No Pertashop</label>
-                        <select name="nops" class="form-select" aria-label="Pilih No Pertashop" required>
-                            <option value="0" selected>Pilih Pertashop</option>
-                            <option value="4P.54308">4P.54308 | SIDOMUKTI</option>
-                            <option value="4P.54315">4P.54315 | ARJOMULYO</option>
-                            <option value="4P.54316">4P.54316 | KENOYOJAYAN</option>
-                            <option value="4P.54317">4P.54317 | SUMBERADI</option>
-                            <option value="4P.54323">4P.54323 | LAJER</option>
-                            <option value="4P.54324">4P.54324 | PADURESO</option>
-                            <option value="4P.54328">4P.54328 | BOJONGSARI</option>
-                            <option value="4P.54329">4P.54329 | KALENG</option>
-                            <option value="4P.54332">4P.54332 | SADANG</option>
-                            <option value="4P.54342">4P.54342 | SINUNGREJO</option>
-                            <option value="4P.54343">4P.54343 | MULYOSRI</option>
-                            <option value="4P.54344">4P.54344 | AMPIH</option>
-                            <option value="4P.55516">4P.55516 | TEMPEL</option>
-                            <option value="4P.55203">4P.55203 | GODEAN</option>
-                            <option value="4P.55526">4P.55526 | TURI</option>
-                        </select>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="shift" class="form-label">Shif</label>
-                        <select name="shift" id="shift" class="form-select" required>
-                            <option value="0" selected>Pilih Shift</option>
-                            <option value="1">Pagi</option>
-                            <option value="2">Siang</option>
-                            <option value="3">FullDay</option>
-                        </select>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="sawal" class="form-label">Stok Awal <small class="text-danger">*(stok akhir tgl
-                                sebelumnya)</small></label>
-                        <input type="number" name="sawal" id="sawal" class="form-control">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="sakhir" class="form-label">Stok Akhir <small class="text-danger">*(kosongkan jika
-                                hujan,badai,dll)</small></label>
-                        <input type="number" name="sakhir" id="sakhir" class="form-control">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="tawal" class="form-label">Totalisator Awal</label>
-                        <input type="number" name="tawal" id="tawal" class="form-control">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="takhir" class="form-label">Totalisator Akhir</label>
-                        <input type="number" name="takhir" id="takhir" class="form-control">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="terra" class="form-label">Terra/Percobaan dll</label>
-                        <input type="number" name="terra" id="terra" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Kirim</button>
-                </form>
+      <div class="row">
+        <div class="col-lg-6 py-4">
+          <h2>Form Laporan Penjualan Pertashop</h2>
+          <br />
+          <form name="submit-to-google-sheet">
+            <div class="form-group mb-3">
+              <label for="tgl" class="form-label">Tanggal</label>
+              <input
+                type="date"
+                name="tanggal"
+                id="tanggal"
+                class="form-control"
+              />
             </div>
+            <div class="form-group mb-3">
+              <label for="nops" class="form-label">No Pertashop</label>
+              <select
+                name="nops"
+                class="form-select"
+                aria-label="Pilih No Pertashop"
+                required
+              >
+                <option value="0" selected>Pilih Pertashop</option>
+                <option value="4P.54308">4P.54308 | SIDOMUKTI</option>
+                <option value="4P.54315">4P.54315 | ARJOMULYO</option>
+                <option value="4P.54316">4P.54316 | KENOYOJAYAN</option>
+                <option value="4P.54317">4P.54317 | SUMBERADI</option>
+                <option value="4P.54323">4P.54323 | LAJER</option>
+                <option value="4P.54324">4P.54324 | PADURESO</option>
+                <option value="4P.54328">4P.54328 | BOJONGSARI</option>
+                <option value="4P.54329">4P.54329 | KALENG</option>
+                <option value="4P.54332">4P.54332 | SADANG</option>
+                <option value="4P.54342">4P.54342 | SINUNGREJO</option>
+                <option value="4P.54343">4P.54343 | MULYOSRI</option>
+                <option value="4P.54344">4P.54344 | AMPIH</option>
+                <option value="4P.55516">4P.55516 | TEMPEL</option>
+                <option value="4P.55203">4P.55203 | GODEAN</option>
+                <option value="4P.55526">4P.55526 | TURI</option>
+              </select>
+            </div>
+            <div class="form-group mb-3">
+              <label for="shift" class="form-label">Shif</label>
+              <select name="shift" id="shift" class="form-select" required>
+                <option value="0" selected>Pilih Shift</option>
+                <option value="1">Pagi</option>
+                <option value="2">Siang</option>
+                <option value="3">FullDay</option>
+              </select>
+            </div>
+            <div class="form-group mb-3">
+              <label for="sawal" class="form-label"
+                >Stok Awal
+                <small class="text-danger"
+                  >*(stok akhir tgl sebelumnya)</small
+                ></label
+              >
+              <input type="text" name="sawal" id="sawal" class="form-control" />
+            </div>
+            <div class="form-group mb-3">
+              <label for="sakhir" class="form-label"
+                >Stok Akhir
+                <small class="text-danger"
+                  >*(kosongkan jika hujan,badai,dll)</small
+                ></label
+              >
+              <input
+                type="text"
+                name="sakhir"
+                id="sakhir"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="tawal" class="form-label">Totalisator Awal</label>
+              <input type="text" name="tawal" id="tawal" class="form-control" />
+            </div>
+            <div class="form-group mb-3">
+              <label for="takhir" class="form-label">Totalisator Akhir</label>
+              <input
+                type="text"
+                name="takhir"
+                id="takhir"
+                class="form-control"
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="terra" class="form-label">Terra/Percobaan dll</label>
+              <input type="text" name="terra" id="terra" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim Laporan</button>
+          </form>
         </div>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        const scriptURL =
-            'https://script.google.com/macros/s/AKfycbwVtIUmFLIHsJlT2WffBup0aO7cZrLzSqt4H2tKHiKgOmfC2W9gIcJXRRi5U0X43bXt/exec'
-        let form = document.forms['submit-to-google-sheet']
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwVtIUmFLIHsJlT2WffBup0aO7cZrLzSqt4H2tKHiKgOmfC2W9gIcJXRRi5U0X43bXt/exec";
+      let form = document.forms["submit-to-google-sheet"];
 
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, {
-                    method: 'POST',
-                    body: new FormData(form)
-                })
-                .then((response) => {
-                    form.reset();
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Laporan Sukses',
-                        text: "Terima Kasih Atas Laporannya",
-                        footer: '<a href="https://wa.me/081229390214?text=Assalamuaikum%20Wr%20Wb%20bantu%20saya%20mas%20admin">Ada kendala?</a>'
-                    });
-                })
-                .catch(error =>
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Laporan Gagal',
-                        text: "Laporan Anda Gagal.Silakan Ulangi...",
-                        footer: '<a href="https://wa.me/081229390214?text=Assalamuaikum%20Wr%20Wb%20bantu%20saya%20mas%20admin">Ada kendala?</a>'
-                    })
-                )
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let jamkerja = ["Libur", "Pagi", "Siang", "Full Shift"];
+
+        dataForm = new FormData(form);
+        let tanggal = format_tanggal(new Date(dataForm.get("tanggal")));
+        let nops = dataForm.get("nops");
+        let shift = dataForm.get("shift");
+        let sawal = Number(ubahKoma(dataForm.get("sawal"))).toFixed(2);
+        let sakhir = Number(ubahKoma(dataForm.get("sakhir"))).toFixed(2);
+        let tawal = Number(ubahKoma(dataForm.get("tawal"))).toFixed(2);
+        let takhir = Number(ubahKoma(dataForm.get("takhir"))).toFixed(2);
+        let terra = Number(ubahKoma(dataForm.get("terra"))).toFixed(2);
+        let sales = takhir - tawal - terra;
+        let loss = sakhir - (sawal - sales);
+
+        let text = `Laporan%20Penjualan%0${nops}%0Tgl%20${tanggal}%0${
+          jamkerja[shift]
+        }%0-----------------%0T.Awal%3A${tawal}%0T.Akhir%3A${takhir}%0Sales(L)%3A${sales}%0Sales(Rp)%3A${formatRupiah(
+          sales * 13900
+        )}%0-----------------%0S.Awal%3A${Number(sawal).toFixed(
+          2
+        )}%0S.Akhir%3A${Number(sakhir).toFixed(2)}%0Losses%3A${Number(
+          loss
+        ).toFixed(2)}%0`;
+
+        fetch(scriptURL, {
+          method: "POST",
+          body: new FormData(form),
         })
-    </script>
-</body>
+          .then((response) => {
+            form.reset();
+            Swal.fire({
+              icon: "success",
+              title: "Laporan Sukses",
+              text: "Terima Kasih Atas Laporannya",
+              footer: `<a href="whatsapp://send?text="${text}">Kirim ke WA</a>`,
+            });
+          })
+          .catch((error) =>
+            Swal.fire({
+              icon: "error",
+              title: "Laporan Gagal",
+              text: "Laporan Anda Gagal.Silakan Ulangi...",
+              footer:
+                '<a href="https://wa.me/081229390214?text=Assalamuaikum%20Wr%20Wb%20bantu%20saya%20mas%20admin">Ada kendala?</a>',
+            })
+          );
+      });
 
+      function format_tanggal(tgl) {
+        return (
+          tgl.getDate() + "-" + (tgl.getMonth() + 1) + "-" + tgl.getFullYear()
+        );
+      }
+
+      function ubahKoma(text) {
+        return text.replace(",", ".");
+      }
+      /* Fungsi formatRupiah */
+      function formatRupiah(bilangan) {
+        let number_string = bilangan.toString(),
+          sisa = number_string.length % 3,
+          rupiah = number_string.substr(0, sisa),
+          ribuan = number_string.substr(sisa).match(/\d{3}/g);
+
+        if (ribuan) {
+          separator = sisa ? "." : "";
+          rupiah += separator + ribuan.join(".");
+        }
+        return rupiah;
+      }
+    </script>
+  </body>
 </html>
